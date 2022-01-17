@@ -1,0 +1,147 @@
+@import '../../styles/styles';
+
+.potsPage {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleArea {
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  padding: 78px 0 60px;
+  box-sizing: border-box;
+  background-size: 100%;
+}
+
+.title {
+  max-width: 520px;
+  align-self: flex-start;
+  margin: 0;
+  @extend %title;
+}
+
+.grandMaSad {
+  background: url("../../img/grandma_sad.png") right 0 top 0 no-repeat;
+}
+
+.grandMaGlad {
+  background: url("../../img/grandma_glad.png") right 0 top 0 no-repeat;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputWithLabel {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.label {
+  @extend %Inter500;
+  @extend %text;
+  padding-bottom: 12px;
+}
+
+.input {
+  @extend %Inter400;
+  @extend %text;
+  max-width: 520px;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 14px 0 14px 14px;
+  margin-right: 20px;
+  border: 1.5px solid $text_regular;
+
+  &Valid {
+    border: 1.5px solid $accent_green;
+  }
+
+  &Invalid {
+    border: 1.5px solid $accent_red;
+  }
+
+  &::placeholder {
+    color: $text_grey;
+  }
+}
+
+.unit {
+  @extend %Inter400;
+  @extend %text;
+  position: absolute;
+  top: 48px;
+  right: 34px;
+}
+
+.error {
+  @extend %Inter400;
+  font-size: 14px;
+  line-height: 17px;
+  color: $accent_red;
+  padding-left: 15px;
+}
+
+.submitBtn {
+  width: 35%;
+  max-width: 300px;
+  height: 50px;
+  margin-top: 34px;
+  @extend %button;
+  align-self: flex-start;
+
+  &:disabled {
+    background: $bg_disabled;
+    color: $text_grey;
+    cursor: default;
+  }
+}
+
+.goOnBtn {
+  width: 410px;
+  height: 50px;
+  margin: 0 auto;
+  @extend %button;
+
+  &:disabled {
+    background: $bg_disabled;
+    color: $text_grey;
+    cursor: default;
+  }
+}
+
+.pots {
+  width: 100%;
+  min-height: 360px;
+  padding: 80px 0 100px;
+  box-sizing: border-box;
+}
+
+.potsList {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.text {
+  @extend %Inter400;
+  @extend %text;
+  text-align: center;
+}

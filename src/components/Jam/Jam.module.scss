@@ -1,0 +1,130 @@
+@import '../../styles/styles';
+
+.jamPage {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 30px;
+  display: flex;
+  flex-direction: column;
+  background: url("../../img/grandma_think.png") right 0 top 310px no-repeat;
+}
+
+.title {
+  max-width: 520px;
+  align-self: flex-start;
+  margin: 0;
+  padding: 78px 0 90px;
+  @extend %title;
+}
+
+.form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputWithLabel {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.label {
+  width: 40px;
+  height: 50px;
+  padding-right: 12px;
+
+  &Cherry {
+    background: url("../../img/cherry.png") no-repeat center;
+  }
+  &Apricot {
+    background: url("../../img/apricot.png") no-repeat center;
+  }
+  &Strawberry {
+    background: url("../../img/strawberry.png") no-repeat center;
+  }
+}
+
+.field {
+  padding-bottom: 36px;
+}
+
+.input {
+  @extend %Inter400;
+  @extend %text;
+  width: calc(100% - 52px);
+  max-width: 520px;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 14px 0 14px 14px;
+  margin-right: 20px;
+  border: 1.5px solid $text_regular;
+
+  &Valid {
+    border: 1.5px solid $accent_green;
+  }
+
+  &Invalid {
+    border: 1.5px solid $accent_red;
+  }
+
+  &::placeholder {
+    color: $text_grey;
+  }
+}
+
+.unit {
+  @extend %Inter400;
+  @extend %text;
+  position: absolute;
+  top: 14px;
+  right: 34px;
+}
+
+.error {
+  @extend %Inter400;
+  font-size: 14px;
+  line-height: 17px;
+  color: $accent_red;
+  padding-left: 66px;
+}
+
+.goOnBtn {
+  width: 410px;
+  height: 50px;
+  margin: 150px auto 100px;
+  @extend %button;
+
+  &:disabled {
+    background: $bg_disabled;
+    color: $text_grey;
+    cursor: default;
+  }
+}
+
+.pots {
+  width: 100%;
+  min-height: 360px;
+  padding: 80px 0 100px;
+  box-sizing: border-box;
+}
+
+.potsList {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.text {
+  @extend %Inter400;
+  @extend %text;
+  text-align: center;
+}

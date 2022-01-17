@@ -1,0 +1,56 @@
+@import 'variables';
+
+%Inter400 {
+  font-family: Inter, 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+%Inter500 {
+  font-family: Inter, 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+%Inter700 {
+  font-family: Inter, 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+%text {
+  font-size: 18px;
+  line-height: 22px;
+  color: $text_regular;
+}
+
+%title {
+  @extend %Inter700;
+  font-size: 55px;
+  line-height: 67px;
+  color: $text_regular;
+}
+
+%button {
+  background: $accent_orange;
+  color: white;
+  padding: 14px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  @extend %Inter700;
+  @extend %text;
+  text-align: center;
+  cursor: pointer;
+  outline-style: none;
+  border: none;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 5px 15px rgba(255, 141, 107, 0.36);
+  }
+}
+
+%link {
+  cursor: pointer;
+  text-decoration: none;
+}

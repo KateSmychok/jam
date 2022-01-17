@@ -1,0 +1,67 @@
+@import '../../styles/styles';
+
+.resultPage {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 30px 450px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: url('../../img/grandma_thanks.png') bottom 100px right 50% no-repeat;
+}
+
+.title {
+  margin: 0;
+  padding-bottom: 100px;
+  @extend %title;
+}
+
+.resultBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 64px;
+}
+
+.kindOfJamBlock {
+  display: flex;
+}
+
+.kindOfJam {
+  @extend %Inter700;
+  font-size: 30px;
+  line-height: 36px;
+  color: $text_regular;
+  padding: 4px 12px 4px 0;
+  margin: 0;
+  position: relative;
+}
+
+.img {
+  height: 44px;
+}
+
+.pots {
+  display: flex;
+  flex-direction: column;
+}
+
+.potsList {
+  width: 100%;
+  padding: 24px 0 64px;
+  box-sizing: border-box;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
+.text {
+  @extend %Inter400;
+  @extend %text;
+  text-align: center;
+}
+
+.link {
+  @extend %button;
+}
