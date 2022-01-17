@@ -1,5 +1,7 @@
 {
   "name": "jam",
+  "author": "Kate Smychok",
+  "license": "ISC",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,24 +22,14 @@
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-react": "^7.28.0",
-    "mini-css-extract-plugin": "2.4.5",
-    "gh-pages": "^3.1.0"
+    "mini-css-extract-plugin": "2.4.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KateSmychok/jam.git"
-  },
-  "author": "Kate Smychok",
-  "license": "ISC",
-  "homepage": "https://katesmychok.github.io/jam/",
   "eslintConfig": {
     "extends": [
       "react-app",
