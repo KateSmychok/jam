@@ -100,12 +100,6 @@
   height: 50px;
   margin: 150px auto 100px;
   @extend %button;
-
-  &:disabled {
-    background: $bg_disabled;
-    color: $text_grey;
-    cursor: default;
-  }
 }
 
 .pots {

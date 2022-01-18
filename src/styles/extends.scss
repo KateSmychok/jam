@@ -44,9 +44,20 @@
   outline-style: none;
   border: none;
   text-decoration: none;
+  transition: all .1s ease-in;
 
   &:hover {
     box-shadow: 0 5px 15px rgba(255, 141, 107, 0.36);
+  }
+
+  &:disabled {
+    background: $bg_disabled;
+    color: $text_grey;
+    cursor: default;
+  }
+
+  &:disabled:hover {
+    box-shadow: none;
   }
 }
 
