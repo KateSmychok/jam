@@ -26,17 +26,21 @@ function App() {
 
   const spreadJam = async (fruit) => {
     let sumOfPotsAmount = 0; // сумма объема всех банок для конкретного вида варенья
-    let leftAmount = Number(fruit.amount); // оставшееся варенье, еще не налитое в банки
+    let leftAmount = fruit.amount; // оставшееся варенье, еще не налитое в банки
     let index;
 
     while (fruit.amount > sumOfPotsAmount) { // пока есть не налитое в банки варенье
-      const i = findPot(arrOfPots, leftAmount); // проверяем, есть ли банка с таким объемом
-      if (i >= 0) { // если есть, берем банку именно такого объема
+      const i = findPot(arrOfPots, leftAmount);
+      // проверяем, есть ли банка с таким объемом
+      if (i >= 0) {
+        // если есть, берем банку именно такого объема
         index = i;
-      } else { // если нет, ищем наиболее подходящую
-        const closest = arrOfPots
-          .sort((a, b) => Math.abs(leftAmount - a) - Math.abs(leftAmount - b))[0];
-        index = findPot(arrOfPots, closest);
+      } else {
+        // если нет, ищем наиболее подходящую
+        const arrOfDifferences = arrOfPots
+          .sort((a, b) => Math.abs(leftAmount - a) - Math.abs(leftAmount - b));
+        const closestHigher = arrOfDifferences.find((item) => item > leftAmount);
+        index = findPot(arrOfPots, closestHigher);
       }
 
       // добавляем банку
